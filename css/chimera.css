@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - One Page Wonder v5.0.7 (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Author @mdfkbtc
  * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/mdfkbtc/chimera-website/blob/master/LICENSE)
  */
 
 body {
@@ -16,6 +16,14 @@ h5,
 h6 {
   font-family: 'Catamaran';
   font-weight: 800 !important;
+}
+
+@media (min-width: 1890px) {
+  .container {
+    max-width: 1800px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 }
 
 .btn-xl {
@@ -43,33 +51,73 @@ h6 {
 
 .navbar-custom .navbar-brand {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   letter-spacing: 0.1rem;
   font-weight: 700;
 }
 
 .navbar-brand-logo {
   margin-right: 15px;
+  max-height: 10vh;
+}
+
+.navbar-dark .navbar-toggler {
+  flex: auto;
 }
 
 .navbar-custom .navbar-nav .nav-item .nav-link {
   text-transform: uppercase;
+  padding: 10px;
+  background: black;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #262626;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: 1px solid slategrey;
+  border-left: 3px solid #6594fb;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  border-color: #407cfd;
+    box-shadow: 0 0 30px #6594fb, 0 0 50px #6594fb;
+}
+
+img {
+  max-width: 100%;
+}
+
 header.masthead {
   height: calc(88vh - 98px) !important;
-  position: relative;
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background-image: url("../img/first-section.webp");
+}
+
+header.masthead .masthead-background {
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  background-image: url(../img/first-section.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
+  top: 0;
+  border: 0;
+  left: 0;
+  right: 0;
 }
 
 header.masthead .masthead-content {
@@ -133,6 +181,16 @@ header.masthead .bg-circle-4 {
   }
 }
 
+@media (max-width: 350px) {
+  .masthead-margin {
+    margin-left: 0!important;
+  }
+}
+
+.masthead-margin {
+  margin-left: 6%;
+}
+
 section.black-section{
   color: white;
   background-color: black;
@@ -166,6 +224,43 @@ p.quote-text {
   padding: 0 10vh 0 10vh;
 }
 
+button.whitepaper {
+  background-color: black;
+  border: 0px;
+}
+
+button.whitepaper:hover {
+  background: grey;
+  box-shadow: 1px 1px #46464633;
+}
+
+button.pool {
+  background: white;
+  border: 0px;
+  border-radius: 20px;
+}
+
+button.pool > a {
+  color: black!important;
+}
+
+button.pool:hover {
+  background-color: #ffffffb8;
+}
+
+button.join-us {
+  background: white;
+  border: 0px;
+}
+
+button.join-us > a {
+  color: black!important;
+}
+
+button.join-us:hover {
+  background-color: #ffffffb8;
+}
+
 .card-margin {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -196,7 +291,7 @@ p.quote-text {
 
 .third-section {
   color: white;
-  background-image: url(../img/third-container.webp);
+  background-image: url(../img/third-container.png);
   height: auto;
   background-repeat: no-repeat;
   background-position: center center;
@@ -206,7 +301,7 @@ p.quote-text {
 
 .last-section {
   color: white;
-  background-image: url(../img/last-section.webp);
+  background-image: url(../img/last-section.png);
   height: auto;
   background-repeat: no-repeat;
   background-position: center center;
@@ -229,14 +324,12 @@ p.quote-text {
 }
 
 .roadmap-field {
-  height: 100%;
-  padding-top: 25%;
-  padding-bottom: 30%;
+  padding-top: 15%;
   max-height: 100%;
 }
 
 .image-game-stats-1 {
-  background-image: url(../img/game-1.webp);
+  background-image: url(../img/game-1.png);
   background-repeat: no-repeat;
   background-position: initial;
   background-attachment: scroll;
@@ -245,7 +338,7 @@ p.quote-text {
 }
 
 .image-game-stats-2 {
-  background-image: url(../img/game-2.webp);
+  background-image: url(../img/game-2.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: scroll;
@@ -254,7 +347,7 @@ p.quote-text {
 }
 
 .image-game-stats-3 {
-  background-image: url(../img/game-3.webp);
+  background-image: url(../img/game-3.png);
   background-repeat: no-repeat;
   background-position: initial;
   background-attachment: scroll;
@@ -270,6 +363,28 @@ p.quote-text {
   max-height: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+   
+   .chimera-pick {
+     display: none;
+   }
+   .chimera-pick-mobile {
+     display: visible;
+   }
+}
+
+@media only screen and (min-width: 800px) {
+   .chimera-pick-mobile {
+     display: none;
+   }
+   .chimera-pick {
+     display: visible;
+   }
+}
+
+.display-4 {
+  font-size: 7vh!important;
+}    
 
 .bg-primary {
   background-color: #ee0979 !important;
@@ -301,4 +416,50 @@ p.quote-text {
 
 .btn-secondary:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+}
+
+.main-title-text {
+  animation-name: fadeInMainText;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeInMainText {
+  0% {
+    position: relative;
+    margin-top: 15%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  
+}
+
+.main-title-sub-text {
+  animation-name: fadeInSubText;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeInSubText {
+  0% {
+    position: relative;
+    margin-top: 12%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  
 }
